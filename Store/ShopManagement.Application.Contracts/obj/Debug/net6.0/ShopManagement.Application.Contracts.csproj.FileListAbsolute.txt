@@ -1,0 +1,15 @@
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\bin\Debug\net6.0\ShopManagement.Application.Contracts.deps.json
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\bin\Debug\net6.0\ShopManagement.Application.Contracts.dll
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\bin\Debug\net6.0\ShopManagement.Application.Contracts.pdb
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\obj\Debug\net6.0\ShopManagement.Application.Contracts.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\obj\Debug\net6.0\ShopManagement.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\obj\Debug\net6.0\ShopManagement.Application.Contracts.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\obj\Debug\net6.0\ShopManagement.Application.Contracts.AssemblyInfo.cs
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\obj\Debug\net6.0\ShopManagement.Application.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\obj\Debug\net6.0\ShopManagement.Application.Contracts.dll
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\obj\Debug\net6.0\refint\ShopManagement.Application.Contracts.dll
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\obj\Debug\net6.0\ShopManagement.Application.Contracts.pdb
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\obj\Debug\net6.0\ref\ShopManagement.Application.Contracts.dll
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\bin\Debug\net6.0\0-FrameWork.dll
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\bin\Debug\net6.0\0-FrameWork.pdb
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Application.Contracts\obj\Debug\net6.0\ShopManagement.Application.Contracts.csproj.CopyComplete

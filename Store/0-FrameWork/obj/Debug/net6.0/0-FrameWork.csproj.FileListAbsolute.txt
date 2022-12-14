@@ -1,0 +1,12 @@
+C:\Users\hp\Desktop\Yasi_Important\code\Store\0-FrameWork\bin\Debug\net6.0\0-FrameWork.deps.json
+C:\Users\hp\Desktop\Yasi_Important\code\Store\0-FrameWork\bin\Debug\net6.0\0-FrameWork.dll
+C:\Users\hp\Desktop\Yasi_Important\code\Store\0-FrameWork\bin\Debug\net6.0\0-FrameWork.pdb
+C:\Users\hp\Desktop\Yasi_Important\code\Store\0-FrameWork\obj\Debug\net6.0\0-FrameWork.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\Yasi_Important\code\Store\0-FrameWork\obj\Debug\net6.0\0-FrameWork.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Yasi_Important\code\Store\0-FrameWork\obj\Debug\net6.0\0-FrameWork.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Yasi_Important\code\Store\0-FrameWork\obj\Debug\net6.0\0-FrameWork.AssemblyInfo.cs
+C:\Users\hp\Desktop\Yasi_Important\code\Store\0-FrameWork\obj\Debug\net6.0\0-FrameWork.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Yasi_Important\code\Store\0-FrameWork\obj\Debug\net6.0\0-FrameWork.dll
+C:\Users\hp\Desktop\Yasi_Important\code\Store\0-FrameWork\obj\Debug\net6.0\refint\0-FrameWork.dll
+C:\Users\hp\Desktop\Yasi_Important\code\Store\0-FrameWork\obj\Debug\net6.0\0-FrameWork.pdb
+C:\Users\hp\Desktop\Yasi_Important\code\Store\0-FrameWork\obj\Debug\net6.0\ref\0-FrameWork.dll
