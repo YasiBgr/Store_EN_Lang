@@ -20,7 +20,7 @@ namespace ShopManagement.Application
         {
            var operation=new OperationResult();
             if (_repository.Exist(x=>x.Name==createProductCategory.Name))
-                return operation.Failed("It is not possible to register a duplicate record,please put another Name");
+                return operation.Failed(ApplicationMessage.DuplicationRecords);
             var slug = createProductCategory.Slug.Slugify();
             var picturePath = $"{createProductCategory.Slug}";
             var pictureName = _fileUploader.UpLoad(createProductCategory.Picture, picturePath);
@@ -37,9 +37,9 @@ namespace ShopManagement.Application
             var operation = new OperationResult();
             var productCategory = _repository.Get(editProductCategory.Id);
             if (productCategory == null)
-                return operation.Failed("Record Not Found");
+                return operation.Failed(ApplicationMessage.RecordNotFound);
                     if (_repository.Exist(x=>x.Name==editProductCategory.Name && x.Id!=editProductCategory.Id))
-                return operation.Failed("It is not possible to register a duplicate record, please put another Name");
+                return operation.Failed(ApplicationMessage.DuplicationRecords);
             var slug = editProductCategory.Slug.Slugify();
             var picturePath = $"{editProductCategory.Slug}";
             var pictureName = _fileUploader.UpLoad(editProductCategory.Picture, picturePath);
@@ -54,6 +54,38 @@ namespace ShopManagement.Application
         public EditProductCategory GetDetails(long Id)
         {
             return _repository.GetDetails(Id);
+        }
+
+        public List<ProductCategoryViewModel> GetProductCategories()
+        {
+            return _repository.GetList();
+        }
+
+        public OperationResult Removed(long Id)
+        {
+
+            var operation = new OperationResult();
+            var productCategory = _repository.Get(Id);
+            if (productCategory == null)
+            {
+                operation.Failed(ApplicationMessage.RecordNotFound);
+            }
+            productCategory.DeleteCategory();
+            _repository.Save();
+            return operation.Succeeded();
+        }
+
+        public OperationResult Restore(long Id)
+        {
+            var operation = new OperationResult();
+            var productCategory = _repository.Get(Id);
+            if (productCategory == null)
+            {
+                operation.Failed(ApplicationMessage.RecordNotFound);
+            }
+            productCategory.RestoreCategory();
+            _repository.Save();
+            return operation.Succeeded();
         }
 
         public List<ProductCategoryViewModel> Search(SearchProductCategory searchProductCategory)

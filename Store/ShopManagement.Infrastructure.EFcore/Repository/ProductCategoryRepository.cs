@@ -35,6 +35,23 @@ namespace ShopManagement.Infrastructure.EFcore.Repository
             }).FirstOrDefault(x => x.Id == id);
         }
 
+        public List<ProductCategoryViewModel> GetList()
+        {
+            return _context.ProductCategories.Select(x => new ProductCategoryViewModel
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Delete = x.Delete
+                //slug =x.Slug
+            }).Where(x => !x.Delete).ToList();
+        }
+
+        public string GetSlugById(long id)
+        {
+            return _context.ProductCategories.Select(x => new { x.Id, x.Slug }).FirstOrDefault(x => x.Id == id).Slug;
+
+        }
+
         public List<ProductCategoryViewModel> Search(SearchProductCategory searchProductCategory)
         {
             var query = _context.ProductCategories.Select(x => new ProductCategoryViewModel()
