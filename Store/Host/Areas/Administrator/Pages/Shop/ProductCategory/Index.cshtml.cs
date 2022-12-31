@@ -21,15 +21,11 @@ namespace Host.Areas.Administrator.Pages.Shop.ProductCategory
 
             productCategories = _productCategoryApplication.Search(searchProductCategory);
         }
-        public IActionResult OnGetCreate()
-        {
-           return RedirectToAction("Create");
-        }
-        public JsonResult OnPostCreate(CreateProductCategory command)
-        {
-            var result = _productCategoryApplication.Create(command);
-            return new JsonResult(result);
-        }
+        //public IActionResult OnGetCreate()
+        //{
+        //   return RedirectToAction("Create");
+        //}
+      
 
      
     }

@@ -1,0 +1,122 @@
+﻿@page
+@model Host.Areas.Administrator.Pages.Shop.Product.EditModel
+@{
+}
+
+
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+
+            @*<div class="row ">*@
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Edit Product</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form method="post" class="form-horizontal" enctype="multipart/form-data">
+
+                            <div class="form-group">
+
+                                  <label asp-for="category.CategoryId" class="col-md-2 control-label ">Category Group</label>
+                                  <select class="form-control" asp-for="category.CategoryId" asp-items='new SelectList(Model.category.Category,"Id","Name")'>
+                                      <option value="0">Chose a Category</option>
+                                  </select>
+                                <label asp-for="category.Name" class="col-md-2 control-label ">name</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" asp-for="category.Name"  onchange="makeSlug('Title', 'Slug')">
+                                </div>
+
+                                 <label asp-for="category.Code" class="col-md-2 control-label ">code</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" asp-for="category.Code">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="category.Slug" class="col-md-2 control-label">Slug</label><div class="col-md-10">
+
+
+                                    <input type="text" class="form-control" asp-for="category.Slug">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label asp-for="category.Picture" class="col-md-2 control-label">Picture</label><div class="col-md-10">
+
+                                    <input type="file" class="form-control" asp-for="category.Picture">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="category.PictureAlt" class="col-md-2 control-label">PictureAlt</label> <div class="col-md-10">
+                                    <input type="text" class="form-control" asp-for="category.PictureAlt" >
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label asp-for="category.PictureTitle" class="col-md-2 control-label">PictureTitle</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" asp-for="category.PictureTitle" >
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="category.Keywords" class="col-md-2 control-label">Keywords</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" asp-for="category.Keywords" >
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label asp-for="category.Description" class="col-md-2 control-label">Description</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" asp-for="category.Description" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="category.ShortDescription" class="col-md-2 control-label">Short Description</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" asp-for="category.ShortDescription" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="category.MetaDescription" class="col-md-2 control-label">MetaDescription</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" asp-for="category.MetaDescription" >
+                                </div>
+                            </div>
+                            <input type="hidden" asp-for="category.Id" value="@Model.category.Id" /> 
+                            <button type="submit" class="btn btn-success waves-effect waves-light m-b-5" style="margin-left:450px">Edit</button>
+                            <a asp-page="./Index" class="btn btn-dark waves-effect waves-light m-b-5 " style="">back</a>
+                            @*
+                            <div class="form-group">
+                            <label class="col-sm-2 control-label">Input Select</label>
+                            <div class="col-sm-10">
+                            <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            </select>
+                            <h6>Multiple select</h6>
+                            <select multiple="" class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            </select>
+                            </div>
+                            </div>*@
+
+                        </form>
+                    </div> <!-- panel-body -->
+                </div> <!-- panel -->
+            </div> <!-- col -->
+            <!-- End row -->
+        </div>
+    </div>
+</div>

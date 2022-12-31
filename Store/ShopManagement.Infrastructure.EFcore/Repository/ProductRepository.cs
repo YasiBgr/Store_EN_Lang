@@ -58,9 +58,9 @@ namespace ShopManagement.Infrastructure.EFcore.Repository
             return _shopContext.Products.Include(x => x.Category).FirstOrDefault(x => x.Id == id);
         }
 
-        public List<ProductViewModel> Search(ProductSearchModel model)
+        public List<ProductViewModel> Search(ProductSearchModel search)
         {
-            var query = _shopContext.Products.Include(x => x.Category).Select(x => new ProductViewModel
+            var query = _shopContext.Products.Select(x => new ProductViewModel()
             {
                 Category = x.Category.Name,
                 CategoryId = x.CategoryId,
@@ -71,14 +71,14 @@ namespace ShopManagement.Infrastructure.EFcore.Repository
                 Id = x.Id,
                 UnitPrice = x.UnitPrice,
                 CreationDate = x.CreationDate.ToString()
-            }); ;
+            });
 
-            if (string.IsNullOrWhiteSpace(model.Name))
-                query = query.Where(x => x.Name.Contains(model.Name));
-            if (model.CategoryID != 0)
-                query = query.Where(x => x.CategoryId == model.CategoryID);
-            if (string.IsNullOrWhiteSpace(model.Code))
-                query = query.Where(x => x.code.Contains(model.Code));
+            if (!string.IsNullOrWhiteSpace(search.Name))
+                query = query.Where(x => x.Name.Contains(search.Name));
+            if (search.CategoryID != 0)
+                query = query.Where(x => x.CategoryId == search.CategoryID);
+            if (!string.IsNullOrWhiteSpace(search.Code))
+                query = query.Where(x => x.code.Contains(search.Code));
             return query.OrderByDescending(x => x.Id).ToList();
         }
     }
