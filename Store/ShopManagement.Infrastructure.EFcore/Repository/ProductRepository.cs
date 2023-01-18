@@ -79,7 +79,8 @@ namespace ShopManagement.Infrastructure.EFcore.Repository
                 query = query.Where(x => x.CategoryId == search.CategoryID);
             if (!string.IsNullOrWhiteSpace(search.Code))
                 query = query.Where(x => x.code.Contains(search.Code));
-            return query.OrderByDescending(x => x.Id).ToList();
+            return query.Where(x => !x.Delete).OrderByDescending(x => x.Id).ToList();
+        
         }
     }
 }

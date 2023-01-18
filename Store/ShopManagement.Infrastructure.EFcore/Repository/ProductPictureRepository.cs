@@ -50,7 +50,7 @@ namespace ShopManagement.Infrastructure.EFcore.Repository
             });
             if (productPictureSearchModel.ProductId != 0)
                 query = query.Where(x => x.ProductId == productPictureSearchModel.ProductId);
-            return query.OrderByDescending(x => x.Id).ToList();
+            return query.Where(x => !x.Isremoved).OrderByDescending(x => x.Id).ToList();
 
         }
     }

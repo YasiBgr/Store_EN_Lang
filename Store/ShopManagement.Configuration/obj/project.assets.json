@@ -689,6 +689,19 @@
         "runtime": {
           "bin/placeholder/ShopManagement.Infrastructure.EFcore.dll": {}
         }
+      },
+      "StoreQueryModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ShopManagement.Infrastructure.EFcore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StoreQueryModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StoreQueryModel.dll": {}
+        }
       }
     }
   },
@@ -1924,6 +1937,11 @@
       "type": "project",
       "path": "../ShopManagement.Infrastructure.EFcore/ShopManagement.Infrastructure.EFcore.csproj",
       "msbuildProject": "../ShopManagement.Infrastructure.EFcore/ShopManagement.Infrastructure.EFcore.csproj"
+    },
+    "StoreQueryModel/1.0.0": {
+      "type": "project",
+      "path": "../StoreQueryModel/StoreQueryModel.csproj",
+      "msbuildProject": "../StoreQueryModel/StoreQueryModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1931,7 +1949,8 @@
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 6.0.0",
       "ShopManagement.Application >= 1.0.0",
       "ShopManagement.Application.Contracts >= 1.0.0",
-      "ShopManagement.Infrastructure.EFcore >= 1.0.0"
+      "ShopManagement.Infrastructure.EFcore >= 1.0.0",
+      "StoreQueryModel >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1969,6 +1988,9 @@
             },
             "C:\\Users\\hp\\Desktop\\Yasi_Important\\code\\Store\\ShopManagement.Infrastructure.EFcore\\ShopManagement.Infrastructure.EFcore.csproj": {
               "projectPath": "C:\\Users\\hp\\Desktop\\Yasi_Important\\code\\Store\\ShopManagement.Infrastructure.EFcore\\ShopManagement.Infrastructure.EFcore.csproj"
+            },
+            "C:\\Users\\hp\\Desktop\\Yasi_Important\\code\\Store\\StoreQueryModel\\StoreQueryModel.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\Yasi_Important\\code\\Store\\StoreQueryModel\\StoreQueryModel.csproj"
             }
           }
         }

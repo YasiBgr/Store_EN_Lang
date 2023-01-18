@@ -21,3 +21,5 @@ C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Configuration\obj\D
 C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Configuration\obj\Debug\net6.0\refint\ShopManagement.Configuration.dll
 C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Configuration\obj\Debug\net6.0\ShopManagement.Configuration.pdb
 C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Configuration\obj\Debug\net6.0\ref\ShopManagement.Configuration.dll
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Configuration\bin\Debug\net6.0\StoreQueryModel.dll
+C:\Users\hp\Desktop\Yasi_Important\code\Store\ShopManagement.Configuration\bin\Debug\net6.0\StoreQueryModel.pdb

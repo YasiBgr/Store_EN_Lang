@@ -11,7 +11,8 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "ShopManagement.Application": "1.0.0",
           "ShopManagement.Application.Contracts": "1.0.0",
-          "ShopManagement.Infrastructure.EFcore": "1.0.0"
+          "ShopManagement.Infrastructure.EFcore": "1.0.0",
+          "StoreQueryModel": "1.0.0"
         },
         "runtime": {
           "ShopManagement.Configuration.dll": {}
@@ -523,6 +524,14 @@
         "runtime": {
           "ShopManagement.Infrastructure.EFcore.dll": {}
         }
+      },
+      "StoreQueryModel/1.0.0": {
+        "dependencies": {
+          "ShopManagement.Infrastructure.EFcore": "1.0.0"
+        },
+        "runtime": {
+          "StoreQueryModel.dll": {}
+        }
       }
     }
   },
@@ -847,6 +856,11 @@
       "sha512": ""
     },
     "ShopManagement.Infrastructure.EFcore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StoreQueryModel/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

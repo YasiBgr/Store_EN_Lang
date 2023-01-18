@@ -14,6 +14,7 @@
     <ProjectReference Include="..\ShopManagement.Application.Contracts\ShopManagement.Application.Contracts.csproj" />
     <ProjectReference Include="..\ShopManagement.Application\ShopManagement.Application.csproj" />
     <ProjectReference Include="..\ShopManagement.Infrastructure.EFcore\ShopManagement.Infrastructure.EFcore.csproj" />
+    <ProjectReference Include="..\StoreQueryModel\StoreQueryModel.csproj" />
   </ItemGroup>
 
 </Project>

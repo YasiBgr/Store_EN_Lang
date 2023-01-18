@@ -8,32 +8,47 @@ namespace Host.Areas.Administrator.Pages.Shop.Product
 {
     public class IndexModel : PageModel
     {
-        private readonly IProductApplication _productApplication;
-        private readonly IProductCategoryApplication _productCategory;
-        public SelectList ProductCategory;
         public ProductSearchModel search;
+        public SelectList ProductCategory;
+        public List<ProductViewModel> product; //{ get; set; }
+
+        private readonly IProductApplication _productApplication;
+
         public IndexModel(IProductApplication productApplication, IProductCategoryApplication productCategory)
         {
             _productApplication = productApplication;
             _productCategory = productCategory;
         }
 
-        public List<ProductViewModel> product; //{ get; set; }
+        private readonly IProductCategoryApplication _productCategory;
+      
 
+        [TempData]
+        public string Message { get;set; }
+       
 
         public void OnGet(ProductSearchModel searchProduct)
         {
             ProductCategory = new SelectList(_productCategory.GetProductCategories(), "Id", "Name"); 
             product= _productApplication.Search(searchProduct);
         }
-        //public IActionResult OnGetCreate()
-        //{
-        //    return RedirectToAction("Create");
-        //}
-      
-        //public IActionResult OnGetEdit(long id)
-        //{
-        //    return RedirectToAction("Edit");
-        //}
+        public IActionResult OnGetRemoved(long Id)
+        {
+            var result = _productApplication.Removed(Id);
+            if (result.IsSucceeded)
+                return RedirectToPage("./Index");
+            Message = result.Massage;
+            return RedirectToPage("./Index");
+
+        }
+        public IActionResult OnGetRestore(long Id)
+        {
+            var result = _productApplication.Restore(Id);
+            if (result.IsSucceeded)
+                return RedirectToPage("./Index");
+            Message = result.Massage;
+            return RedirectToPage("./Index");
+
+        }
     }
 }

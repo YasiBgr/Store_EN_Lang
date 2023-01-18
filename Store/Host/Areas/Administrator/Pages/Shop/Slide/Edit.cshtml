@@ -1,0 +1,96 @@
+﻿@page
+@model Host.Areas.Administrator.Pages.Shop.Slide.EditModel
+@{
+}
+
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+
+            @*<div class="row ">*@
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Product Category</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form method="post" class="form-horizontal" enctype="multipart/form-data">
+
+                            <div class="form-group">
+                                <label asp-for="EditSlide.Picture" class="control-label">Picture</label>
+                                <input type="file" class="form-control" asp-for="EditSlide.Picture" accept="image/*">
+                                <span asp-validation-for="EditSlide.Picture" class="error"></span>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="EditSlide.PictureAlt" class="control-label">Alt</label>
+                                        <input type="text" class="form-control" asp-for="EditSlide.PictureAlt">
+                                        <span asp-validation-for="EditSlide.PictureAlt" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="EditSlide.PictureTitle" class="control-label">PictureTitle </label>
+                                        <input type="text" class="form-control" asp-for="EditSlide.PictureTitle">
+                                        <span asp-validation-for="EditSlide.PictureTitle" class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="EditSlide.Heading" class="control-label">Heading</label>
+                                        <input type="text" class="form-control" asp-for="EditSlide.Heading">
+                                        <span asp-validation-for="EditSlide.Heading" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="EditSlide.Title" class="control-label">Title</label>
+                                        <input type="text" class="form-control" asp-for="EditSlide.Title">
+                                        <span asp-validation-for="EditSlide.Title" class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="EditSlide.Text" class="control-label">Text</label>
+                                        <input type="text" class="form-control" asp-for="EditSlide.Text">
+                                        <span asp-validation-for="EditSlide.Text" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="EditSlide.BtnText" class="control-label">BtnText</label>
+                                        <input type="text" class="form-control" asp-for="EditSlide.BtnText">
+                                        <span asp-validation-for="EditSlide.BtnText" class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label asp-for="EditSlide.Link" class="control-label">Link</label>
+                                        <input type="text" class="form-control" asp-for="EditSlide.Link">
+                                        <span asp-validation-for="EditSlide.Link" class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input type="hidden" asp-for="EditSlide.Id" value="@Model.EditSlide.Id" />
+                            <div class="modal-footer">
+                                <a asp-page="./Index" type="button" class="btn btn-default waves-effect" >cancle</a>
+                                <button type="submit" class="btn btn-info waves-effect waves-light">Submit Edit</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>

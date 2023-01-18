@@ -65,8 +65,8 @@ namespace ShopManagement.Infrastructure.EFcore.Repository
             });
             if (!string.IsNullOrWhiteSpace(searchProductCategory.Name))
                 query = query.Where(x => x.Name.Contains(searchProductCategory.Name));
-            return query.OrderByDescending(x=>x.Id).ToList();
-                   
-         }
+            return query.Where(x => !x.Delete).OrderByDescending(x => x.Id).ToList();
+
+        }
     }
 }
